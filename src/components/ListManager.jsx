@@ -22,8 +22,11 @@ var ListManager = React.createClass({
       marginTop: 10
     }
 
-    var headingStyle = {
+    var headingStyle = {}
 
+    var formStyle = {
+      height: 35,
+      marginTop: 5
     }
 
     if (this.props.headingColor) {
@@ -36,7 +39,7 @@ var ListManager = React.createClass({
             <h3>{this.props.title}</h3>
           </div>
           <div classeName="row panel-body">
-            <form onSubmit={this.handleSubmit}>
+            <form style={formStyle} onSubmit={this.handleSubmit}>
               <div className="col-sm-9">
                 <input className="form-control" onChange={this.onChange} value={this.state.newItemText}></input>
               </div>
